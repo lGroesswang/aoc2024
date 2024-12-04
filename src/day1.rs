@@ -3,6 +3,7 @@ pub fn part1(input: &str) -> usize {
     let mut l1: Vec<usize> = vec![];
     let mut l2: Vec<usize> = vec![];
     let mut i = 0;
+
     for line in input.lines() {
         let a =line.split(' ').collect::<Vec<&str>>();
         l1.push(a[0].parse().unwrap());
@@ -16,7 +17,6 @@ pub fn part1(input: &str) -> usize {
     let mut sum = 0;
     for i in 0..l1.len() {
         sum += l1[i].abs_diff(l2[i]);
-        //println!("{} {} {}", sum, l1[i].1, l2[i].1);
     }
 
     sum
